@@ -3,20 +3,20 @@ import javax.swing.JOptionPane;
 public class Ejercicio01d {
 
 	public static void main(String[] args) {
-		mediaNúmeros();
+		mediaNÃºmeros();
 
 	}
-	public static void mediaNúmeros() {
-		String str = JOptionPane.showInputDialog("Introduzca número entero");
+	public static void mediaNÃºmeros() {
+		String str = JOptionPane.showInputDialog("Introduzca nï¿½mero entero");
 		int num1 = Integer.parseInt(str);
 		
-		str = JOptionPane.showInputDialog("Introduzca número flotante");
+		str = JOptionPane.showInputDialog("Introduzca nï¿½mero flotante");
 		Float num2 = Float.parseFloat(str);
 		
-		str = JOptionPane.showInputDialog("Introduzca número double");
+		str = JOptionPane.showInputDialog("Introduzca nï¿½mero double");
 		Double num3 = Double.parseDouble(str);
 		
-		System.out.println("La meida de los tres número es " + (num1 + num2 + num3)/3);
+		System.out.println("La meida de los tres nï¿½mero es " + (num1 + num2 + num3)/3);
 	}
 
 }
