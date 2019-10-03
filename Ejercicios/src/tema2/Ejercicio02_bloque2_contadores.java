@@ -13,7 +13,9 @@ public class Ejercicio02_bloque2_contadores {
 		int num1 = Integer.parseInt(str);
 		
 		if (num1 >= 0 && num1<=25) {
-			contBajos++;
+			contBajos++; //incremento simple
+			// contBajos = conBajos + 1;
+			// contBajos += 1;
 		}
 		else {
 			if (num1 >=26 && num1 <=250) {
