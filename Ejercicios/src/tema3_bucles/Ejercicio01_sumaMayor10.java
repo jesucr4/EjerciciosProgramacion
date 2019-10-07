@@ -5,16 +5,16 @@ import javax.swing.JOptionPane;
 public class Ejercicio01_sumaMayor10 {
 
 	public static void main(String[] args) {
-		// pedimos números al usuario
-		int primerNumero = Integer.parseInt(JOptionPane.showInputDialog("Introduzca primer número"));
-		int segundoNumero = Integer.parseInt(JOptionPane.showInputDialog("Introduzca segundo número"));
-		int tercerNumero = Integer.parseInt(JOptionPane.showInputDialog("Introduzca tercer número"));
-		int cuartoNumero = Integer.parseInt(JOptionPane.showInputDialog("Introduzca cuarto número"));
-		
-		//creamos variables para bucle for
-		int minimo = 10;
-		
-		for ( i = primerNumero; primerNumero)
+	int suma = 0;
+	
+	//pedimos números al usuario
+	for (int i=0; i<4; i++) {
+		int num = Integer.parseInt(JOptionPane.showInputDialog("Introduzca un número"));
+		if (num >=10) {
+			suma +=num;
+		}
 	}
-
+	//mostramos resultados al usuario
+	System.out.println("La suma de los números mayores de 10 es " + suma);
+	}
 }
