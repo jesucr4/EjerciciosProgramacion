@@ -5,13 +5,16 @@ import javax.swing.JOptionPane;
 public class Ejercicio02_bloque2_MayorYMenor {
 
 	public static void main(String[] args) {
+		//declaramos variables mayor y menor
 		int mayor = 0, menor = 0;
-		int cantidadNumeros = Integer.parseInt(JOptionPane.showInputDialog("Cuántos números va a introducir?"));
-		int primerNumero = Integer.parseInt(JOptionPane.showInputDialog("Introduzca el primer número"));
+		//pedimos al usuario que indique la cantidad de nÃºmeros que va a introducir
+		int cantidadNumeros = Integer.parseInt(JOptionPane.showInputDialog("Cuï¿½ntos nï¿½meros va a introducir?"));
+		//pedimos el primer nÃºmero para que este sea tanto el mayor como el menor
+		int primerNumero = Integer.parseInt(JOptionPane.showInputDialog("Introduzca el primer nï¿½mero"));
 		menor=primerNumero;
 		mayor = primerNumero;
 		for (int i=0 ; i<cantidadNumeros-1; i++) {
-			int numeros = Integer.parseInt(JOptionPane.showInputDialog("Introduzca números para obtener mayor y menor"));
+			int numeros = Integer.parseInt(JOptionPane.showInputDialog("Introduzca nï¿½meros para obtener mayor y menor"));
 			
 			if (numeros < menor) {
 				menor = numeros;
@@ -21,7 +24,7 @@ public class Ejercicio02_bloque2_MayorYMenor {
 				}
 			}
 		}
-		System.out.println("El número mayor es "+ mayor + " y el número menor es " + menor);
+		System.out.println("El nï¿½mero mayor es "+ mayor + " y el nï¿½mero menor es " + menor);
 	}
 }
 
