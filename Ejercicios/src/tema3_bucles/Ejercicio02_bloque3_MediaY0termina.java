@@ -7,17 +7,17 @@ public class Ejercicio02_bloque3_MediaY0termina {
 	public static void main(String[] args) {
 			int num = 1;
 			int suma = 0;
-			float acumMedia = 0;
+			float contMedia = 0;
 			for (int i ; num!=0; i++) {
-				 i = Integer.parseInt(JOptionPane.showInputDialog("Introduzca número para realizar suma y posterior media\n" + 
-				"Introduzca para terminar operación: 0"));
+				 i = Integer.parseInt(JOptionPane.showInputDialog("Introduzca nï¿½mero para realizar suma y posterior media\n" + 
+				"Introduzca para terminar operaciï¿½n: 0"));
 				 			 
 				if (i!=0) { 
-					acumMedia++;
+					contMedia++;
 					 suma +=i;
 				}else {
-					System.out.println("La media de los números introducidos es " + (suma/acumMedia));
-					return;
+					System.out.println("La media de los nï¿½meros introducidos es " + (suma/contMedia));
+					
 				}
 				
 				}

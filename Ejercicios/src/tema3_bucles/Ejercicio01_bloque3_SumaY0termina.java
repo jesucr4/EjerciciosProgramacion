@@ -5,21 +5,21 @@ import javax.swing.JOptionPane;
 public class Ejercicio01_bloque3_SumaY0termina {
 
 	public static void main(String[] args) {
-		//declaramos variables que vamos a usar posteriormente en el bucle y para realizar la suma de los números
-		int num = 1;
+		//declaramos variables que vamos a usar posteriormente en el bucle y para realizar la suma de los nï¿½meros
+		int num = 0;
 		int suma = 0;
 		// realizamos bucle for, para que se siga repitiendo pedimos que el valor de la variable num sea siempre diferente a 0
-		//pediremos a usuario que introduzca números para realizar suma, así como le permitiremos terminar con la operación
+		//pediremos a usuario que introduzca nï¿½meros para realizar suma, asï¿½ como le permitiremos terminar con la operaciï¿½n
 		for (int i ; num!=0; i++) {
-		 i = Integer.parseInt(JOptionPane.showInputDialog("Introduzca número para realizar suma\n" + 
-		"Introduzca para terminar operación: 0"));
-		 //realizamos operación de suma asignando cada valor que vaya introduciendo el usuario a i
+		 i = Integer.parseInt(JOptionPane.showInputDialog("Introduzca nï¿½mero para realizar suma\n" + 
+		"Introduzca para terminar operaciï¿½n: 0"));
+		 //realizamos operaciï¿½n de suma asignando cada valor que vaya introduciendo el usuario a i
 		 suma +=i;
-		 //declaramos condición para terminar con el bucle, será cuando el valor introducido por el usuario sea igual a cero
+		 //declaramos condiciï¿½n para terminar con el bucle, serï¿½ cuando el valor introducido por el usuario sea igual a cero
 		 //mostraremos mensaje en pantalla.
 		 if (i == 0) {
-			 System.out.println("La suma total de los números introducidos es "+ suma);
-			 return;
+			 System.out.println("La suma total de los nï¿½meros introducidos es "+ suma);
+			 
 		 
 		
 		}
