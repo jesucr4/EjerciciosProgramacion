@@ -1,12 +1,9 @@
+package tema1;
 import javax.swing.JOptionPane;
 
-public class Ejercicio01d {
+public class Ejercicio01a {
 
 	public static void main(String[] args) {
-		mediaNúmeros();
-
-	}
-	public static void mediaNúmeros() {
 		String str = JOptionPane.showInputDialog("Introduzca n�mero entero");
 		int num1 = Integer.parseInt(str);
 		
@@ -16,7 +13,9 @@ public class Ejercicio01d {
 		str = JOptionPane.showInputDialog("Introduzca n�mero double");
 		Double num3 = Double.parseDouble(str);
 		
-		System.out.println("La meida de los tres n�mero es " + (num1 + num2 + num3)/3);
+		System.out.println("El n�mero entero es " + num1 + ", el n�mero flotante es " + num2 +
+				" y el n�mero double es " + num3);
+		
 	}
 
 }

@@ -1,3 +1,4 @@
+package tema1;
 import javax.swing.JOptionPane;
 
 public class Ejercicio01e {
@@ -9,14 +10,14 @@ public class Ejercicio01e {
 		}
 		
 		public static void ejercicio() {
-			String str = JOptionPane.showInputDialog("Introduzca número entero ");
+			String str = JOptionPane.showInputDialog("Introduzca nï¿½mero entero ");
 			int numA = Integer.parseInt(str);
 			
-			str = JOptionPane.showInputDialog("Introduzca número entero ");
+			str = JOptionPane.showInputDialog("Introduzca nï¿½mero entero ");
 			int numB = Integer.parseInt(str);
 			
 			
-			System.out.println("Un número entero A es " +  numA + " el otro número B entero es " + numB);
+			System.out.println("Un nï¿½mero entero A es " +  numA + " el otro nï¿½mero B entero es " + numB);
 			
 			 int aux = numA;
 			 numA = numB;

@@ -1,3 +1,4 @@
+package tema1;
 import javax.swing.JOptionPane;
 
 public class Ejercicio01c {

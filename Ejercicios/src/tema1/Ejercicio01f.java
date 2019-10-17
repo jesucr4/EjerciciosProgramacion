@@ -1,3 +1,4 @@
+package tema1;
 import javax.swing.JOptionPane;
 
 public class Ejercicio01f {
@@ -15,7 +16,7 @@ public class Ejercicio01f {
 		
 		Float IM = (IA / 12) / 100;
 		
-		System.out.println("El interés mensual es de " + IM);
+		System.out.println("El interï¿½s mensual es de " + IM);
 		
 		Float Capital = (float) 150000;
 		
@@ -39,14 +40,14 @@ public class Ejercicio01f {
 		str = JOptionPane.showInputDialog("Introduzca capital");
 		Float Capital = Float.parseFloat(str);
 		
-		str = JOptionPane.showInputDialog("Introduzca número de plazos mensuales de la hipoteca" );
+		str = JOptionPane.showInputDialog("Introduzca nï¿½mero de plazos mensuales de la hipoteca" );
 		Float Mensualidades = Float.parseFloat(str);
 		
 		Float IA = Euribor + Diferencial; 
 		
 		Float IM = (IA / 12) / 100;
 		
-		System.out.println("El interés mensual es de " + IM);
+		System.out.println("El interï¿½s mensual es de " + IM);
 				
 		Float IM0 = IM + 1;
 		
