@@ -1,4 +1,4 @@
-package tema5_arrays_bloque01;
+package tema5_arrays;
 
 public class Utils {
 	/**
