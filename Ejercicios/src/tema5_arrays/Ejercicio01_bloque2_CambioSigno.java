@@ -10,8 +10,8 @@ public class Ejercicio01_bloque2_CambioSigno {
 		System.out.println();
 		//realizamos bucle for para cambiar signo a los números que sean pares
 		for (int i = 0; i < array.length; i++) {
-			if (array[i]%2 ==0 && array[i]!=0) {
-				System.out.println(array[i]*(-1));
+			if (array[i]%2 ==0 ) {
+				System.out.println(array[i]*(-1));  //array[i] *=-1
 			}
 		}
 		

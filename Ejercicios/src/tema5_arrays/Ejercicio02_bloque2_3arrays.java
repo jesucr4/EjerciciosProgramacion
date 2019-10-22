@@ -20,29 +20,14 @@ public class Ejercicio02_bloque2_3arrays {
 		
 		for (int i = 0; i < primerArray.length; i++) {
 			if (i%2 == 1) {
-				int impar = i;
-				for (int j = 0; j < tercerArray.length; j++) {
-					if (j%2 == 1) {
-						tercerArray[j]=impar;
-					}
-				}
-				
+				tercerArray[i]= primerArray[i];
+			}else {
+				tercerArray[i] = segundoArray[i];
 			}
-		}
 		
-		for ( int i = 0; i < segundoArray.length; i++) {
-			if (i%2 == 0) {
-				int par = i;
-				for (int j = 0; j < tercerArray.length; j++) {
-					if (j%2 == 0) {
-					 tercerArray[j] = par;
-					}
-				}
-			}
 		}
 		Utils.mostrarArray(tercerArray);
-		}
-		
+	}
 }
 
 
