@@ -4,37 +4,30 @@ public class EjercicioBurbuja_Arrays {
 
 	public static void main(String[] args) {
 		//creamos e inicializamos array
-		int array[] = Utils.creaArrayNumerosAzar(05, 0, 1000);
+		int array[] = Utils.creaArrayNumerosAzar(150, 0, 1000);
 		Utils.mostrarArray(array);
 		//creamos variable auxiliar para guardar número menor que el anterior
 		int aux;
 		//creamos variable boolean para realizar bucle do while
-		boolean superiorNumeroPosterior = true;
+		//boolean superiorNumeroPosterior = true;
 		
-		do {
+		//do {
 			for (int i = 0; i < array.length-1; i++) {
-				if (array[i] > array [i+1]) {
-					aux = array [i+1];
-					array[i+1] = array[i];
-					array [i] = aux;	
-				}else {
-					for (i = 0; i < array.length-1; i++) {
-						if (array[i] > array [i+1]) {
-							aux = array [i+1];
-							array[i+1] = array[i];
-							array [i] = aux;
+				for (int j = 0; j < array.length-2; j++) {
+						if (array[j] > array [j+1]) {
+							aux = array [j+1];
+							array[j+1] = array[j];
+							array [j] = aux;
 					}
 				}
 			}
-				Utils.mostrarArray(array);
+		
 			
-			superiorNumeroPosterior = false;
+					
+		//}while (superiorNumeroPosterior);
 		
-			}
-		}while (superiorNumeroPosterior);
+		
 		Utils.mostrarArray(array);
-		
-	
 
 	}
 }
