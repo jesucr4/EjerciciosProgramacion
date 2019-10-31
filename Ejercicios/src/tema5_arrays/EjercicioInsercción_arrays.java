@@ -4,12 +4,12 @@ public class EjercicioInsercción_arrays {
 
 	public static void main(String[] args) {
 		//generamos array y lo inicializamos
-		int array[]= Utils.creaArrayNumerosAzar(5, 0, 1000);
+		int array[]= Utils.creaArrayNumerosAzar(150, 0, 1000);
 		int aux;
 		int i, j;
 		Utils.mostrarArray(array);
 		//creamos bucle for para recorrer array
-		for ( i = 1; i < array.length; i++) {
+		for ( i = 0; i < array.length; i++) {
 			aux = array[i];
 			//creamos otro bucle for para realizar iteracciones
 			for ( j = i; j >0 && array[j-1]>aux; j--) {

@@ -4,7 +4,7 @@ public class EjercicioSelección_array {
 
 	public static void main(String[] args) {
 		//creamos, inicializamos y mostramos array
-		int array[] = Utils.creaArrayNumerosAzar(150, 0, 1000);
+		int array[] = Utils.creaArrayNumerosAzar(5, 0, 100);
 		Utils.mostrarArray(array);
 		//creamos variable menor y variables i y j para bucle y variable auxiliar para guardar número
 		int i,j, aux;
