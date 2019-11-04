@@ -22,7 +22,7 @@ public class Utils {
 	public static int[] creaArrayNumerosAzar (int longitud, int limInf, int limSup) {
 		int array[] = new int[longitud];
 		for (int i = 0; i < array.length; i++) {
-			array[i] = obtenerNumeroAleatorio(limInf, limSup);
+			array[i] = obtenerNumeroAzar(limInf, limSup);
 		}
 		return array;
 	}
@@ -39,9 +39,11 @@ public class Utils {
 	 * 
 	 * @return
 	 */
-	public static int obtenerNumeroAleatorio (int limiteInferior, int limiteSuperior) {
-		return (int) Math.round(Math.random() * (limiteSuperior - limiteInferior) + limiteInferior);
+	public static int obtenerNumeroAzar (int min, int max) {
+		 return (int) Math.round(Math.random() * (max - min)) + min;
 	}
+
+	
 	
 	
 	
