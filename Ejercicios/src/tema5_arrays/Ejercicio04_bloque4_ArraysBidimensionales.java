@@ -3,10 +3,10 @@ package tema5_arrays;
 public class Ejercicio04_bloque4_ArraysBidimensionales {
 
 	public static void main(String[] args) {
-		//llamamos al método rellena matriz para crear e inicializar un array bidimensional
-		int array [][]=new int [5][5];
-		rellenaMatriz(array);
-		mostrarMatriz(array);
+		//llamamos al mï¿½todo rellena matriz para crear e inicializar un array bidimensional
+		int matriz [][]=new int [5][5];
+		rellenaMatriz(matriz, -100, 100);
+		mostrarMatriz(matriz);
 		
 		
 
@@ -18,28 +18,27 @@ public class Ejercicio04_bloque4_ArraysBidimensionales {
 	 * @param min
 	 * @param max
 	 */
-	private static void rellenaMatriz(int [][] array) {
-		for (int i = 0; i < array.length; i++) {
-			array[i] = Utils.obtenerNumeroAleatorio();
-			for (int j = 0; j < array.length; j++) {
-				array[j]= Utils.obtenerNumeroAleatorio();
+	private static void rellenaMatriz(int matriz [][], int min, int max) {
+		for (int i = 0; i < matriz.length; i++) {
+			for (int j = 0; j < matriz[i].length; j++) {
+				matriz[i] [j] = Utils.obtenerNumeroAzar(min, max);
+				
 			}
 		}		
 	}
 	/**
 	 * 
 	 * @param array
-	 * @return
 	 */
-	private static int[][] mostrarMatriz (int[][] array) {
+	private static void mostrarMatriz (int matriz [][]) {
 		System.out.println("Contenido del array bidimensional");
-		for (int i = 0; i < array.length; i++) {
-			System.out.println(array[i] + "");
-			for (int j = 0; j < array.length; j++) {
-				System.out.println(array[j]+ "");
+		for (int i = 0; i < matriz.length; i++) {
+			for (int j = 0; j < matriz[i].length; j++) {
+				System.out.print(matriz[i] [j] + " ");
 			}
+			System.out.println();
 		}
-		return array;
+		
 		
 	}
 	
