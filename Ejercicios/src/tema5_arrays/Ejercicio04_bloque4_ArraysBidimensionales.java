@@ -10,7 +10,16 @@ public class Ejercicio04_bloque4_ArraysBidimensionales {
 		//llamamos a método para comprobar si la raíz es positiva
 		matrizPositiva(matriz);
 		//método para comprobar si la diagonal es positiva
-		comprobarDiagonal(matriz);
+		boolean esDiagonal = matrizDiagonal(matriz);
+		if (esDiagonal) {
+			System.out.println("La matriz es DIAGONAL");
+		}
+		else {
+			System.out.println("La matriz NO ES DIAGONAL");
+		}
+		matrizTriangularSuperior(matriz);
+		matrizTraspuesta(matriz);
+		matrizOpouesta(matriz);
 	}
 	
 	/**
@@ -61,19 +70,73 @@ public class Ejercicio04_bloque4_ArraysBidimensionales {
 			System.out.println("La matriz es NEGATIVA");
 		}
 		}
-		
-	private static void comprobarDiagonal(int matriz[][]) {
-		int i = 0;
-		int j = 0;
-		for ( i = 0; i < matriz.length-1; i++) {
-			for ( j = 0; j < matriz[i].length-1; j=+6) {
+	
+	/**
+	 * 
+	 * @param matriz
+	 * @return
+	 */
+	public static boolean matrizDiagonal (int matriz[][]) {
+		for (int i = 0; i < matriz.length; i++) {
+			for (int j = 0; j < matriz[i].length; j=+6) {
+				if (matriz[i][j] != 0) { 
+					return false;
+				}
 			}
 		}
-		//if ( matriz [i][j] < 0) {
-			//System.out.println("La matriz no es diagonal");
-	//	}else {
-		//	System.out.println("La matriz  ES DIAGONAL!!!");
-		//}
+		return true;
+	}
+	/**
+	 * 
+	 * @param matriz
+	 */
+	private static void matrizTriangularSuperior (int matriz[][]) {
+		int suma = 0;
+		for (int i = 1; i < matriz.length; i++) {
+			for (int j = 0; j < matriz[i].length; j++) {
+				if (j<i) {
+					suma+=matriz[i][j];
+				}
+			}
+		}
+		if(suma==0) {
+			System.out.println("La matriz ES TRIANGULAR SUPERIOR");
+		}else {
+			System.out.println("La matriz NO ES TRIANGULAR SUPERIOR");
+		}
+	}
+	
+	private static void matrizDifusa (int matriz[][]) {
+		for (int i = 0; i < matriz.length; i++) {
+			for (int j = 0; j < matriz[i].length; j++) {
+				
+			}
+		}
+	}
+	
+	private static void matrizTraspuesta (int matriz[][]) {
+		int aux []= new int [5];
+		
+		for ( int i = 0; i < matriz.length; i++) {
+			for ( int j = 0; j < matriz[i].length; j++) {
+				 aux = matriz [i];
+				 matriz[i] = matriz [j];
+				 matriz [j] = aux;
+				 System.out.print(matriz[i][j] + " ");
+			}
+			
+			System.out.println();
+		}
+		
+	}
+	
+	private static void matrizOpouesta (int matriz[][]) {
+		for (int i = 0; i < matriz.length; i++) {
+			for (int j = 0; j < matriz[i].length; j++) {
+				System.out.print(matriz[i][j]*(-1) + " ");
+			}
+			System.out.println();
+		}
 	}
 	
 
