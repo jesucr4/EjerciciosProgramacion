@@ -136,7 +136,21 @@ public class Ejercicio04_bloque4_ArraysBidimensionales {
 				return false;
 			}
 		}
+		for (int i = 0; i < matriz.length; i++) {
+			//la i me recorre todas las filas
+			//la j me recorre todas las columnas
+			boolean nohayCeros = true; 
+			for (int j = 0; j < matriz.length; j++) {
+				if (matriz [j][i] == 0) {// en la fila i no hay al menos un 0
+					nohayCeros = false;
+				}
+			}
+			if (nohayCeros ) {
+				return false;
+			}
 		
+		
+		}
 		return true;
 	}
 	
