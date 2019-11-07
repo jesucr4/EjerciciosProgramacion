@@ -3,13 +3,18 @@ package tema5_arrays;
 public class Ejercicio04_bloque4_ArraysBidimensionales {
 
 	public static void main(String[] args) {
-		//llamamos al método rellena matriz para crear e inicializar un array bidimensional
+		//llamamos al mï¿½todo rellena matriz para crear e inicializar un array bidimensional
 		int matriz [][]=new int [5][5];
 		rellenaMatriz(matriz, -100, 100);
+		System.out.println();
+		
 		mostrarMatriz(matriz);
-		//llamamos a método para comprobar si la raíz es positiva
+		System.out.println();
+		
+		//llamamos a mï¿½todo para comprobar si la raï¿½z es positiva
 		matrizPositiva(matriz);
-		//método para comprobar si la diagonal es positiva
+		System.out.println();
+		//mï¿½todo para comprobar si la diagonal es positiva
 		boolean esDiagonal = matrizDiagonal(matriz);
 		if (esDiagonal) {
 			System.out.println("La matriz es DIAGONAL");
@@ -17,9 +22,14 @@ public class Ejercicio04_bloque4_ArraysBidimensionales {
 		else {
 			System.out.println("La matriz NO ES DIAGONAL");
 		}
+		
+		System.out.println();
 		matrizTriangularSuperior(matriz);
+		System.out.println();
 		matrizTraspuesta(matriz);
+		System.out.println();
 		matrizOpouesta(matriz);
+		System.out.println();
 	}
 	
 	/**
@@ -78,8 +88,8 @@ public class Ejercicio04_bloque4_ArraysBidimensionales {
 	 */
 	public static boolean matrizDiagonal (int matriz[][]) {
 		for (int i = 0; i < matriz.length; i++) {
-			for (int j = 0; j < matriz[i].length; j=+6) {
-				if (matriz[i][j] != 0) { 
+			for (int j = 0; j < matriz[i].length; j++) {
+				if ( i!=j && matriz[i][j] != 0) { 
 					return false;
 				}
 			}
@@ -106,12 +116,28 @@ public class Ejercicio04_bloque4_ArraysBidimensionales {
 		}
 	}
 	
-	private static void matrizDifusa (int matriz[][]) {
+	/**
+	 * 
+	 * @param matriz
+	 * @return
+	 */
+	public static boolean matrizDispersa (int matriz[][]) {
+		//voy a comprobar si todas las  filas tienen al menos un elemento igual a 0
 		for (int i = 0; i < matriz.length; i++) {
-			for (int j = 0; j < matriz[i].length; j++) {
-				
+			//la i me recorre todas las filas
+			//la j me recorre todas las columnas
+			boolean nohayCeros = true; 
+			for (int j = 0; j < matriz.length; j++) {
+				if (matriz [i][j] == 0) {// en la fila i no hay al menos un 0
+					nohayCeros = false;
+				}
+			}
+			if (nohayCeros ) {
+				return false;
 			}
 		}
+		
+		return true;
 	}
 	
 	private static void matrizTraspuesta (int matriz[][]) {
