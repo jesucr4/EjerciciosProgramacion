@@ -22,14 +22,23 @@ public class Ejercicio04_bloque4_ArraysBidimensionales {
 		else {
 			System.out.println("La matriz NO ES DIAGONAL");
 		}
-		
 		System.out.println();
+		
+		//matrizTriangularSuperior
 		matrizTriangularSuperior(matriz);
 		System.out.println();
+		
+		//método para matriz traspuesta
 		matrizTraspuesta(matriz);
 		System.out.println();
+		
+		//método para matriz opuesta
 		matrizOpouesta(matriz);
 		System.out.println();
+		
+		//método para crear array unidimensional
+		ArrayUnidimensional(matriz);
+		Utils.mostrarArray(ArrayUnidimensional(matriz));
 	}
 	
 	/**
@@ -177,8 +186,33 @@ public class Ejercicio04_bloque4_ArraysBidimensionales {
 			}
 			System.out.println();
 		}
+		
 	}
 	
+	/**
+	 * 
+	 * @param matriz
+	 * @return
+	 */
+	
+	public static int[] ArrayUnidimensional( int matriz[][]) {
+		//creamos variable para obtener cantidad posiciones
+		int contPosiciones = 0;
+		//bucle for para recorrer matriz y ver el número de posiciones que  tiene
+		for (int i = 0; i < matriz.length; i++) {
+			contPosiciones+= matriz[i].length;
+		}
+		//creamos array unidimensional
+		int array []= new int [contPosiciones];
+		int k = 0;
+		for (int i = 0; i < matriz.length; i++) {
+			for (int j = 0; j < matriz[i].length; j++) {
+				array[k]= matriz[i][j];
+				k++;
+			}
+		}
+		return array;
+	}
 
 
 
