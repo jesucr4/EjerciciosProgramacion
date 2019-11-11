@@ -29,11 +29,33 @@ public class Ejercicio_Matriz_Adicional {
 			System.out.println();
 		}
 	}
-	public static void operarMatriz (int matriz [][]) {
-		for (int i = 0; i < matriz.length; i++) {
-			for (int j = 0; j < matriz[i].length; j++) {
+	/**
+	 * 
+	 * @param matriz
+	 * @return
+	 */
+	//creamos nueva matriz para incluir en esta los números de la matriz principal
+	public static int[]	[] nuevaMatriz (int matriz [][]){
+		//creamos nueva matriz y la recorremos con el bucle for
+		//procedemos a incluir en ella los datos de la matriz principal que nos interesan
+		int Matrizficticia [][] = new int [3][3];
+		
+			for (int i = 0; i < Matrizficticia.length; i++) {
+				for (int j = 0; j < Matrizficticia.length; j++) {
 				
+				}
 			}
+		
+		return Matrizficticia;
+		
+	}
+	
+	public static void operarMatriz (int matriz [][]) {
+		
+		do {
+			for
+			
+		}while(i == j);
 		}
 	}
 

@@ -1,23 +1,27 @@
-package tema4_Orientaci贸naObjetos_Bloque3_Ejercicio03;
+package tema4_Orientaci髇aObjetos_Bloque3_Ejercicio03;
+
+import javax.swing.JOptionPane;
 
 public class Persona {
 	String Nombre;
 	String Apellidos;
 	String DNI;
-	String direcci贸n;
-	int tel茅fono;
+	String direcci髇;
+	int tel閒ono;
 
 
-	public Persona (String NuevoNombre, String NuevoApellido, String NuevoDNI, String NuevaDirecci贸n, int NuevoTlfn) {
-		Nombre = NuevoNombre;
-		Apellidos = NuevoApellido;
-		DNI = NuevoDNI;
-		direcci贸n = NuevaDirecci贸n;
-		tel茅fono = NuevoTlfn;
-	}
-	
-	public void DatosPersona () {
+	//public Persona (String NuevoNombre, String NuevoApellido, String NuevoDNI, String NuevaDirecci髇, int NuevoTlfn) {
 		
+		//Nombre = JOptionPane.showInputDialog("Introduzca nuevo nombre" + NuevoNombre);
+		//Apellidos =  JOptionPane.showInputDialog("Introduzca apellidos" + NuevoApellido);
+		//DNI = JOptionPane.showInputDialog("Introduzca DNI" + NuevoDNI);
+		//direcci髇 = JOptionPane.showInputDialog("Introduzca direcci髇" + NuevaDirecci髇);
+		//tel閒ono = Integer.parseInt(JOptionPane.showInputDialog("Introduzca tel閒ono" + NuevoTlfn));
+	//}
+	
+	public void imprimir() {
+		System.out.println("Nombre " + Nombre + " - apellidos: " +
+				Apellidos + " - DNI: " + DNI + " -direcci髇: " + direcci髇 + " -tel閒ono " + tel閒ono);
 	}
 
 }
