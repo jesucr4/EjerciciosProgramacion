@@ -1,27 +1,27 @@
-package tema4_OrientaciónaObjetos_Bloque3_Ejercicio03;
+package tema4_OrientaciÃ³naObjetos_Bloque3_Ejercicio03;
 
-import javax.swing.JOptionPane;
+//import javax.swing.JOptionPane;
 
 public class Persona {
 	String Nombre;
 	String Apellidos;
 	String DNI;
-	String dirección;
-	int teléfono;
+	String direcciÃ³n;
+	int telÃ©fono;
 
 
-	//public Persona (String NuevoNombre, String NuevoApellido, String NuevoDNI, String NuevaDirección, int NuevoTlfn) {
+	//public Persona (String NuevoNombre, String NuevoApellido, String NuevoDNI, String NuevaDirecciï¿½n, int NuevoTlfn) {
 		
 		//Nombre = JOptionPane.showInputDialog("Introduzca nuevo nombre" + NuevoNombre);
 		//Apellidos =  JOptionPane.showInputDialog("Introduzca apellidos" + NuevoApellido);
 		//DNI = JOptionPane.showInputDialog("Introduzca DNI" + NuevoDNI);
-		//dirección = JOptionPane.showInputDialog("Introduzca dirección" + NuevaDirección);
-		//teléfono = Integer.parseInt(JOptionPane.showInputDialog("Introduzca teléfono" + NuevoTlfn));
+		//direcciï¿½n = JOptionPane.showInputDialog("Introduzca direcciï¿½n" + NuevaDirecciï¿½n);
+		//telï¿½fono = Integer.parseInt(JOptionPane.showInputDialog("Introduzca telï¿½fono" + NuevoTlfn));
 	//}
 	
 	public void imprimir() {
 		System.out.println("Nombre " + Nombre + " - apellidos: " +
-				Apellidos + " - DNI: " + DNI + " -dirección: " + dirección + " -teléfono " + teléfono);
+				Apellidos + " - DNI: " + DNI + " -direcciï¿½n: " + direcciÃ³n + " -telï¿½fono " + telÃ©fono);
 	}
 
 }
