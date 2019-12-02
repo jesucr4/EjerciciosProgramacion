@@ -1,4 +1,4 @@
-package tema4_OrientaciÛnaObjetos_Bloque3_¡rbol;
+package tema4_Orientaci√≥naObjetos_Bloque3_√Årbol;
 
 public class Hoja extends Elemento_Arbol {
 	
@@ -7,9 +7,15 @@ public class Hoja extends Elemento_Arbol {
 	public Hoja() {
 		// TODO Auto-generated constructor stub
 	}
+	
+	public Hoja(String nombre) {
+		super();
+		this.nombre = nombre;
+	}
+
 	@Override
 	public String toString() {
-		return "Hoja [hoja=" + nombre + ", toString()=" + super.toString() + "]";
+		return "Hoja [nombre=" + nombre + "]";
 	}
 
 	public String getHoja() {
