@@ -8,10 +8,12 @@ public class Coche extends Vehiculo {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Coche(String nombre, int posicionVehiculo, String color, int pista) {
-		super(nombre, posicionVehiculo, color, pista);
+	
+	public Coche(String nombre, int posicionVehiculo, String color, Pista p) {
+		super(nombre, posicionVehiculo, color, p);
 		// TODO Auto-generated constructor stub
 	}
+
 
 	@Override
 	public void paint(Graphics g) {

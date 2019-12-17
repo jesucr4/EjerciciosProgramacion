@@ -4,12 +4,12 @@ import java.awt.Graphics;
 
 public class Moto extends Vehiculo {
 
-	public Moto() {
+	public Moto(String nombre, int posicionVehiculo, String color, Pista p) {
+		super(nombre, posicionVehiculo, color, p);
 		// TODO Auto-generated constructor stub
 	}
 
-	public Moto(String nombre, int posicionVehiculo, String color, int pista) {
-		super(nombre, posicionVehiculo, color, pista);
+	public Moto() {
 		// TODO Auto-generated constructor stub
 	}
 

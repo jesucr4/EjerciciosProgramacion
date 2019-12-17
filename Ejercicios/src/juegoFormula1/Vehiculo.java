@@ -2,12 +2,14 @@ package juegoFormula1;
 
 import java.awt.Graphics;
 
+import tema5_arrays.Utils;
+
 public abstract class Vehiculo {
 
 	private String nombre;
 	private int posicionVehiculo = 0;
 	private String color;
-	private int pista;
+	private Pista p = new Pista();
 	
 	public Vehiculo() {
 		// TODO Auto-generated constructor stub
@@ -20,16 +22,51 @@ public abstract class Vehiculo {
 		this.nombre = nombre;
 		this.posicionVehiculo = posicionVehiculo;
 		this.color = color;
-		this.pista = pista;
+		
 	}
 
+
+	public Vehiculo(String nombre, int posicionVehiculo, String color, Pista p) {
+		super();
+		this.nombre = nombre;
+		this.posicionVehiculo = posicionVehiculo;
+		this.color = color;
+		this.p = p;
+	}
 
 
 	public abstract void paint (Graphics g);
-	
-	public void avanza () {
+		
+	public void avanzaPosiciones () {
+		for (int i=posicionVehiculo; i<=100; i++) {
+			this.posicionVehiculo = Utils.obtenerNumeroAzar(2, 8);
+		}
 		
 	}
+
+
+	public Pista getP() {
+		return p;
+	}
+
+
+
+	public void setP(Pista p) {
+		this.p = p;
+	}
+
+
+
+	
+	@Override
+	public String toString() {
+		return "Vehiculo [nombre=" + nombre + ", posicionVehiculo=" + posicionVehiculo + ", color=" + color + ", p=" + p
+				+ "]";
+	}
+
+
+
+	
 	
 	public String getNombre() {
 		return nombre;
@@ -55,13 +92,6 @@ public abstract class Vehiculo {
 		this.color = color;
 	}
 
-	public int getPista() {
-		return pista;
-	}
-
-	public void setPista(int pista) {
-		this.pista = pista;
-	}
 	
 
 }
