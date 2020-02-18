@@ -1,9 +1,9 @@
-package tema4_OrientaciÃ³naObjetos_Bloque3_CuestionesExamen;
+package tema4_OrientaciónaObjetos_Bloque3_CuestionesExamen;
 
 public abstract class Cuestion {
 
-	private String enunciado;
-	private int respuestaCorrecta;
+	protected String enunciado;
+	protected int respuestaCorrecta;
 	
 	public Cuestion() {
 		// TODO Auto-generated constructor stub
@@ -14,21 +14,13 @@ public abstract class Cuestion {
 		this.enunciado = enunciado;
 		this.respuestaCorrecta = respuestaCorrecta;
 	}
+	
+	
+	
 
-	public String getEnunciado() {
-		return enunciado;
-	}
 
-	public void setEnunciado(String enunciado) {
-		this.enunciado = enunciado;
-	}
-
-	public int getRespuestaCorrecta() {
-		return respuestaCorrecta;
-	}
-
-	public void setRespuestaCorrecta(int respuestaCorrecta) {
-		this.respuestaCorrecta = respuestaCorrecta;
+	public boolean esCorrecta(int respuestaUsuario) {
+		return this.respuestaCorrecta = respuestaUsuario;
 	}
 
 	@Override
@@ -36,8 +28,8 @@ public abstract class Cuestion {
 		return "Cuestion [enunciado=" + enunciado + ", respuestaCorrecta=" + respuestaCorrecta + "]";
 	}
 	
-	public abstract void mostrarEnPantalla();
+	public abstract int mostrarEnPantalla ();
 	
-	public abstract void evaluar();
+	
 
 }
