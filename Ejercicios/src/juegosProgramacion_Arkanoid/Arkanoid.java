@@ -112,7 +112,7 @@ public class Arkanoid extends Canvas{
 	public void paint() {
 		// TODO Auto-generated method stub
 		Graphics g = strategy.getDrawGraphics();
-		g.setColor(Color.getColor(nm)));
+		g.setColor(Color.BLACK);
 		g.fillRect(0, 0, this.getWidth(), this.getHeight());
 		
 		for (ObjetosArkanoid o : this.participantes) {
