@@ -9,6 +9,7 @@ import java.text.SimpleDateFormat;
 
 import java.util.List;
 
+import tema7_BasesDatos.MenuBBDD.Modelo.Cliente;
 import tema7_BasesDatos.MenuBBDD.Modelo.Venta;
 import tema7_BasesDatos.MenuBBDD.Modelo.Controladores.ConnectionManagerV2;
 import tema7_BasesDatos.MenuBBDD.Modelo.Controladores.ControladorVenta;
@@ -83,26 +84,30 @@ public class GestionVenta {
 	 * 
 	 * @throws ErrorBBDDException
 	 * @throws ParseException
+	 * @throws ImposibleConectarException 
 	 */
-	private static void alta() throws ErrorBBDDException, ParseException {
+	private static void alta() throws ErrorBBDDException, ParseException, ImposibleConectarException {
 		System.out.println("\n\tAlta de venta\n");
 		Venta venta = new Venta();
-		int idClie = -1;
-		while (idClie < 0) {
-			System.out.print("\nIntroduzca 'DNI' del cliente en la venta ");
-			idClie = buscarIdCliente(Utils.getStringConsola());
-		}
-		int idCon = -1;
-		while (idCon < 0) {
+		//int idClie = -1;
+		//while (idClie < 0) {
+			System.out.print("\nIntroduzca 'dniNie' del cliente en la venta ");
+			int idClie = buscarIdCliente(Utils.getStringConsola());
+			venta.setIdCliente(idClie);
+		//}
+		
+		//int idCon = -1;
+		//while (idCon < 0) {
 			System.out.print("\nIntroduzca 'cif' del concesionario en la venta ");
-			idCon = buscarIdConcesionario(Utils.getStringConsola());
-		}
-		int idCoche = -1;
-		while (idCoche < 0) {
+			
+			int idCon = buscarIdConcesionario(Utils.getStringConsola());
+		//}
+		//int idCoche = -1;
+		//while (idCoche < 0) {
 			System.out.print("\nIntroduzca 'bastidor' del coche en la venta ");
-			idCoche = buscarIdCoche(Utils.getStringConsola());
-		}
-		venta.setIdCliente(idClie);
+			int idCoche = buscarIdCoche(Utils.getStringConsola());
+		//}
+		
 		venta.setIdConcesionario(idCon);
 		venta.setIdCoche(idCoche);
 
@@ -126,7 +131,7 @@ public class GestionVenta {
 			conn = ConnectionManagerV2.getConexion();
 
 			Statement s = conn.createStatement();
-			ResultSet rs = s.executeQuery("Select id from cliente where dniNie = " + dniNie);
+			ResultSet rs = s.executeQuery("Select id from cliente where 'dniNie' =  '" + dniNie + "'");
 
 			if (rs.next()) {
 				id = rs.getInt("id");
@@ -147,7 +152,7 @@ public class GestionVenta {
 			conn = ConnectionManagerV2.getConexion();
 
 			Statement s = conn.createStatement();
-			ResultSet rs = s.executeQuery("Select id from concesionario where cif = " + cif);
+			ResultSet rs = s.executeQuery("Select id from concesionario where cif = '" + cif + "'");
 
 			if (rs.next()) {
 				id = rs.getInt("id");
@@ -168,7 +173,7 @@ public class GestionVenta {
 			conn = ConnectionManagerV2.getConexion();
 
 			Statement s = conn.createStatement();
-			ResultSet rs = s.executeQuery("Select id from coche where bastidor = " + bastidor);
+			ResultSet rs = s.executeQuery("Select id from coche where bastidor = '" + bastidor + "'");
 
 			if (rs.next()) {
 				id = rs.getInt("id");

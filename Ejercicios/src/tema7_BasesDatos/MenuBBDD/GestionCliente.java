@@ -100,7 +100,7 @@ public class GestionCliente {
 		cli.setDniNie(Utils.getStringConsola());
 		System.out.print("\nIntroduzca 'Fecha Nacimiento' del cliente: ");
 		try {
-			cli.setFechaNac((Date) sdf.parse(Utils.getStringConsola()));
+			cli.setFechaNac( sdf.parse(Utils.getStringConsola()));
 		} catch (ParseException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
